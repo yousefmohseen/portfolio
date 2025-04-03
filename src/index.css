@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@layer components{
+/*global*/
+    input,textarea{
+        @apply 
+            pl-6 h-14 w-full 
+            outline-none border-praim9 border-[0.3px] rounded-[8px] mb-6
+        ;
+    }
+    h2{
+        @apply text-[40px] font-semibold;
+    }
+    h5{
+        @apply text-[20px] font-medium font-inter;
+    }
+    .active{
+        @apply text-praim6;
+    }
+    .active-sec{
+        @apply bg-praim6 text-white;
+    }
+    .btn{
+        @apply w-[150px] h-[50px] rounded-[8px] text-center font-medium font-inter cursor-pointer;
+    }
+    .tooltip {
+        background-color: var(--color-praim6);
+        color: white;
+        text-align: center;
+        font-size: 10px;
+        font-weight: 400;
+        border-radius: 4px;
+        padding: 4px 6px;
+        position: absolute;
+        right: -16px;
+        bottom: 180%;
+    }    
+    .tooltip::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-top: -1px;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: var(--color-praim6) transparent transparent transparent;
+    } 
+    .pos-center{
+        @apply
+            absolute top-[50%] left-[50%] translate-[-50%] 
+        ;
+    }
+    .flex-bet-center{
+        @apply
+            flex justify-between items-center 
+        ;
+    }
+    #about,
+    #education,
+    #projects .head, 
+    #projects .showproj,
+    #contact{
+        @apply      
+            p-sp1 pt-0 pb-24  
+            max-tab:pl-sp2 max-tab:pr-sp2
+            max-tab-min:h-auto max-tab-min:pl-sp4 max-tab-min:pr-sp4  
+    }
+
+
+/*nav bar */
+    nav{
+        @apply 
+            sticky top-0 p-sp1 pt-sp2 pb-sp4
+            font-semibold dark:text-white [&_button]:cursor-pointer
+            max-tab:pl-sp2 max-tab:pr-sp2
+            max-tab-min:pl-sp4 max-tab-min:pr-sp4 max-tab-min:bg-white max-tab-min:dark:bg-praim1
+        ;
+    }
+    nav ul{
+        @apply 
+            flex justify-center items-center gap-6 *:cursor-pointer
+            max-tab-min:pt-9 max-tab-min:h-screen max-tab-min:w-[30%]
+            max-tab-min:flex-col max-tab-min:justify-start 
+            max-tab-min:absolute max-tab-min:right-0 max-tab-min:top-[100%] 
+            max-tab-min:hidden max-tab-min:bg-white max-tab-min:dark:bg-praim1 max-tab-min:dark:text-white 
+    ;
+    }
+    
+
+/* hero */
+    #hero{
+        @apply 
+            h-sp3 
+            p-sp1 pt-1 pb-0 gap-9
+            max-tab:pl-sp2 max-tab:pr-sp2
+            max-tab-min:h-auto max-tab-min:pl-sp4 max-tab-min:pr-sp4 max-tab-min:flex-col
+        ;
+    }
+
+
+/* about */
+    #about{
+        @apply
+            min-h-sp3 flex-row-reverse gap-sp2 
+            max-tab:gap-8 max-tab-min:flex-col
+        ;
+    }
+
+
+/* education */
+    #education{
+        @apply 
+            relative min-h-screen
+        ;
+    }
+
+
+/* contact2 */
+    #contact2{
+        @apply 
+            h-[348px] m-sp5 mt-0 bg-praim6 rounded-4xl -rotate-2 text-white
+            max-tab:ml-sp2 max-tab:mr-sp2
+            max-tab-min:h-auto max-tab-min:ml-sp4 max-tab-min:mr-sp4
+        ;
+    }
+
+
+/* projects */
+    #projects .head{
+        @apply
+            flex justify-between items-end pb-14
+            max-tab-min:pb-10 max-mob:block max-mob:pb-7
+        ;
+    }
+    #projects .showproj{
+        @apply
+            grid grid-cols-4 gap-14 
+            max-lap:grid-cols-3
+            max-tab:grid-cols-2 max-tab:gap-8 
+            max-mob:grid-cols-1 
+        ;
+    }
+
+
+/* footer */
+    footer{
+       @apply
+            h-24 ml-sp1 mr-sp1 pb-10 flex justify-between items-end gap-6 
+            border-t-[1px] border-praim9 font-inter 
+            max-tab-min:h-auto max-tab-min:pt-6 max-tab:ml-sp2 max-tab:mr-sp2 
+            max-tab-min:ml-sp4 max-tab-min:mr-sp4 max-tab-min:flex-col max-tab-min:items-center
+       ;
+    }
+}
+
+
+
+@theme{
+    --breakpoint-mob: 480px;   
+    --breakpoint-tab-min: 768px;
+    --breakpoint-tab: 992px;
+    --breakpoint-lap: 1367px;
+    --font-poppins:"Poppins", sans-serif;
+    --font-inter:"Inter", sans-serif;
+    --spacing-sp1:70px;
+    --spacing-sp2:40px;
+    --spacing-sp3:calc(100vh - 85px);
+    --spacing-sp4:20px;
+    --spacing-sp5:92px;
+    --color-praim1:#1D2130;
+    --color-praim2:#282938;
+    --color-praim3:#344054;
+    --color-praim4:#92929D;
+    --color-praim5:#98A2B3; 
+    --color-praim6:#0C96E2;
+    --color-praim7:#EDECEC;
+    --color-praim8:#583FBC;
+    --color-praim9:#BEC0BF;
+    --color-praim10:#A6A6A6;
+    --color-praim1-opc:#00000088;
+}
+
+
