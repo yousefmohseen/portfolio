@@ -8,17 +8,14 @@ const Projects = () => {
   const [detpage, setDetpage] = useState(false)
   const [activeSlide, setActiveSlide] = useState(0)
   const [activeSlide2, setActiveSlide2] = useState(info.projects.length - 4)
-
-  if (window.location.href.indexOf("details") >= 0) {
-    useEffect(() => {
+  useEffect(() => {
+    if (window.location.href.indexOf("details") >= 0) {
       setDetpage(true)
-    }, [])
-  }
-  else {
-    useEffect(() => {
+    }
+    else {
       setDetpage(false)
-    }, [])
-  }
+    }
+  }, [])
 
   let sliderRef = useRef(null)
   const next = () => {
@@ -111,7 +108,7 @@ const Projects = () => {
         {info.projects.map((item, index) => {
           return (
             <div className="p-7 max-tab:p-4" key={index}>
-              <a href={detpage ? item.id : "portfolio/details/" + item.id}>
+              <a href={item.id}>
                 <img className="w-full mb-8 rounded-[8px]" src={item.srcImg} alt="" />
                 <div className="flex-bet-center items-end">
                   <div>
@@ -130,7 +127,7 @@ const Projects = () => {
       <div className={!detpage ? "showproj max-tab-min:pb-0" : "hidden"}>
         {info.projects?.map((item, index) => {
           return (
-            <a key={index} href={detpage ? item.id : "portfolio/details/" + item.id}>
+            <a key={index} href={"/portfolio/details/" + item.id}>
               <img className="w-full mb-8 rounded-[8px]" src={item.srcImg} alt="" />
               <div className="flex-bet-center items-end">
                 <div>

@@ -14,8 +14,14 @@ const Root = () => {
     }
     const [themes, setThemes] = useState(getTheme)
     const [actdet, setActdet] = useState("active")
+    const [acthome, setActhome] = useState("active")
 
     const navItem = [
+        {
+            href: "hero",
+            content: "Home",
+            cls: acthome,
+        },
         {
             href: "about",
             content: "About me",
@@ -40,7 +46,7 @@ const Root = () => {
 
     return (
         <div className={themes + " text-praim1 dark:bg-praim1 dark:text-white"}>
-            <NavBar navItem={navItem} add={setActdet} themes={{ setThemes, themes }} />
+            <NavBar navItem={navItem} add={{setActdet,setActhome}} themes={{ setThemes, themes }} />
             <Outlet />
             <Footer />
         </div>

@@ -97,6 +97,7 @@
         @apply 
             h-sp3 
             p-sp1 pt-1 pb-0 gap-9
+            [@media(max-height:476px)]:h-fit
             max-tab:pl-sp2 max-tab:pr-sp2
             max-tab-min:h-auto max-tab-min:pl-sp4 max-tab-min:pr-sp4 max-tab-min:flex-col
         ;
@@ -169,7 +170,7 @@
     --font-inter:"Inter", sans-serif;
     --spacing-sp1:70px;
     --spacing-sp2:40px;
-    --spacing-sp3:calc(100vh - 85px);
+    --spacing-sp3:calc(100vh - 96px);
     --spacing-sp4:20px;
     --spacing-sp5:92px;
     --color-praim1:#1D2130;
