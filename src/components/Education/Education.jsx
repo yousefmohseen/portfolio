@@ -1,6 +1,8 @@
 import { Link } from "react-scroll"
 import { info } from "../../info"
 import { useState } from "react"
+import bg1 from "../../assets/image/bg1.svg"
+
 
 const Education = () => {
   const education = info.education
@@ -17,8 +19,8 @@ const Education = () => {
 
   return (
     <section id="education" >
-      <img className="absolute -top-7 right-0 " src="/portfolio/src/assets/image/bg1.svg" alt="" />
-      <img className="absolute -bottom-10 left-0 -rotate-z-[192deg]" src="/portfolio/src/assets/image/bg1.svg" alt="" />
+      <img className="absolute -top-7 right-0 " src={bg1} alt="" />
+      <img className="absolute -bottom-10 left-0 -rotate-z-[192deg]" src={bg1} alt="" />
       <h5 className="text-center text-praim6">Education and Experience</h5>
       <h2 className="mb-7 dark:text-white text-praim2 text-center" >Education & Experience</h2>
       <div className="grid grid-cols-2 gap-x-20 gap-y-7 max-tab-min:grid-cols-1 max-tab-min:pb-33">

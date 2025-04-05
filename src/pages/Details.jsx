@@ -2,6 +2,11 @@ import { useParams } from "react-router-dom"
 import { info } from "../info"
 import Projects from "../components/Projects/Projects"
 import { useState } from "react"
+import icon from "../assets/image/icon.svg"
+import icon1 from "../assets/image/icon1.svg"
+import full from "../assets/image/full.svg"
+import borderL from "../assets/image/border-l.png"
+import borderD from "../assets/image/border-d.png"
 
 const Details = () => {
   const params = useParams()
@@ -23,10 +28,10 @@ const Details = () => {
             <div className="hidden size-full bg-praim1-opc absolute top-0 left-0 ">
               <div className="pos-center flex items-center justify-center gap-3">
                 <button onClick={() => setShow(true)} className="cursor-pointer">
-                  <img src="/portfolio/src/assets/image/full.svg" alt="" />
+                  <img src={full} alt="" />
                 </button>
                 <a href={proj.demoUrl}>
-                  <img src="/portfolio/src/assets/image/icon1.svg" alt="" />
+                  <img src={icon1} alt="" />
                 </a>
               </div>
             </div>
@@ -38,7 +43,7 @@ const Details = () => {
                 <p className="text-[14px] font-medium text-praim10">{proj.date}</p>
               </div>
               <a href={proj.demoUrl}>
-                <img src="/portfolio/src/assets/image/icon.svg" alt="" />
+                <img src={icon} alt="" />
               </a>
             </div>
             <p className="mt-3 mb-4">{proj.desc}</p>
@@ -52,8 +57,8 @@ const Details = () => {
             </button>
           </div>
         </div>
-        <img className="block dark:hidden absolute bottom-0 left-0" src="/portfolio/src/assets/image/border-l.png" alt="" />
-        <img className="hidden dark:block absolute bottom-0 left-0" src="/portfolio/src/assets/image/border-d.png" alt="" />
+        <img className="block dark:hidden absolute bottom-0 left-0" src={borderL} alt="" />
+        <img className="hidden dark:block absolute bottom-0 left-0" src={borderD} alt="" />
       </section>
       <Projects />
     </>

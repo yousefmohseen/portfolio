@@ -3,6 +3,8 @@ import { info } from "../../info"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import icon from "../../assets/image/icon.svg"
+
 
 const Projects = () => {
   const [detpage, setDetpage] = useState(false)
@@ -116,7 +118,7 @@ const Projects = () => {
                     <p>{item.basicLang}</p>
                   </div>
                   <a href={item.demoUrl}>
-                    <img src="/portfolio/src/assets/image/icon.svg" alt="" />
+                    <img src={icon} alt="" />
                   </a>
                 </div>
               </a>
@@ -135,7 +137,7 @@ const Projects = () => {
                   <p>{item.basicLang}</p>
                 </div>
                 <a href={item.demoUrl}>
-                  <img src="/portfolio/src/assets/image/icon.svg" alt="" />
+                  <img src={icon} alt="" />
                 </a>
               </div>
             </a>

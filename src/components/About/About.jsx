@@ -1,4 +1,6 @@
 import { info } from "../../info"
+import aboutL from "../../assets/image/about-l.png"
+import aboutD from "../../assets/image/about-d.png"
 
 const About = () => {
     const prog = info.about.prog
@@ -24,8 +26,8 @@ const About = () => {
                 </ul>
             </div>
             <div className="max-w-[500px]">
-                <img className="block dark:hidden" src="/portfolio/src/assets/image/about-l.png" alt="" />
-                <img className="hidden dark:block" src="/portfolio/src/assets/image/about-d.png" alt="" />
+                <img className="block dark:hidden" src={aboutL} alt="" />
+                <img className="hidden dark:block" src={aboutD} alt="" />
             </div>
         </section>
     )

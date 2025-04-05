@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react'
 import { info } from '../../info'
 import { Link } from 'react-scroll'
 import { NavLink } from 'react-router-dom'
+import menuL from "../../assets/image/menu-l.png"
+import menuD from "../../assets/image/menu-d.png"
+import closeL from "../../assets/image/close-l.png"
+import closeD from "../../assets/image/close-d.png"
 
 const NavBar = ({ navItem, add, themes }) => {
     const [acthomdet, setActhomdet] = useState(false)
@@ -83,12 +87,12 @@ const NavBar = ({ navItem, add, themes }) => {
             </button>
             <button className='hidden max-tab-min:block'>
                 <span onClick={() => setShownav(false)} className={shownav ? "block" : "hidden"}>
-                    <img className={themes.themes == "light" ? "block" : "hidden"} src="/portfolio/src/assets/image/menu-l.png" alt="" />
-                    <img className={themes.themes == "dark" ? "block" : "hidden"} src="/portfolio/src/assets/image/menu-d.png" alt="" />
+                    <img className={themes.themes == "light" ? "block" : "hidden"} src={menuL} alt="" />
+                    <img className={themes.themes == "dark" ? "block" : "hidden"} src={menuD} alt="" />
                 </span>
                 <span onClick={() => setShownav(true)} className={!shownav ? "block" : "hidden"}>
-                    <img className={themes.themes == "light" ? "block" : "hidden"} src="/portfolio/src/assets/image/close-l.png" alt="" />
-                    <img className={themes.themes == "dark" ? "block" : "hidden"} src="/portfolio/src/assets/image/close-d.png" alt="" />
+                    <img className={themes.themes == "light" ? "block" : "hidden"} src={closeL} alt="" />
+                    <img className={themes.themes == "dark" ? "block" : "hidden"} src={closeD} alt="" />
                 </span>
             </button>
         </nav>
