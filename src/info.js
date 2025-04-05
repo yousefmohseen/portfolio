@@ -1,9 +1,14 @@
+import photoI from "./assets/image/yousef-mohseen.png"
+import projschool from "./assets/image/school.jpg"
+import projskiing from "./assets/image/skiing.jpg"
+import projshoesstore from "./assets/image/shoes-store.jpg"
+
 export const info = {
     fname: "Yousef",
     lname: "Mohseen",
     linkcv: "https://drive.usercontent.google.com/u/0/uc?id=1OL0fDe1P6P_z4xxsL3ALaCGhbPB9uiJl&export=download",
     linkgithub:"https://github.com/yousefmohseen",
-    photo:"../../assets/image/yousef-mohseen.png",
+    photo:photoI,
     desc:"I'm Yousef Mohseen, a creative front-end developer. I've been helping businesses solve their problems through my design for over a year.",
     about: {
         desc: "A Front-end Developer with Over One Year Experience  \
@@ -79,7 +84,7 @@ export const info = {
     projects: [
         {
             id: 1,
-            srcImg: "/portfolio/src/assets/image/school.jpg",
+            srcImg: projschool,
             add: "Educational Platform",
             desc: "A website specialized in education and displaying lessons, lectures, lecturers, and educational blogs. \
             	If you have a school, university, educational institution, or educational platform, do not hesitate to request a website.",
@@ -92,7 +97,7 @@ export const info = {
         },
         {
             id: 2,
-            srcImg: "/portfolio/src/assets/image/skiing.jpg",
+            srcImg: projskiing,
             add: "Sports Platform",
             desc: "A website specialized in displaying the latest news and sports activities related to skiing sport. If you have a sports club and want to grow it faster, do not hesitate to request the website.",
             basicLang: "Html-Css3",
@@ -104,7 +109,7 @@ export const info = {
         },
 		{
             id: 3,
-            srcImg: "/portfolio/src/assets/image/shoes-store.jpg",
+            srcImg: projshoesstore,
             add: "Online Store",
             desc: "A website specializing in showcasing the latest shoe models for quick marketing and sales. \
             	If you have products you want to sell quickly, don't hesitate to request a quote from the website.",
