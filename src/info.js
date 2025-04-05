@@ -3,7 +3,7 @@ export const info = {
     lname: "Mohseen",
     linkcv: "https://drive.usercontent.google.com/u/0/uc?id=1OL0fDe1P6P_z4xxsL3ALaCGhbPB9uiJl&export=download",
     linkgithub:"https://github.com/yousefmohseen",
-    photo:"./src/assets/image/yousef-mohseen.png",
+    photo:"../../assets/image/yousef-mohseen.png",
     desc:"I'm Yousef Mohseen, a creative front-end developer. I've been helping businesses solve their problems through my design for over a year.",
     about: {
         desc: "A Front-end Developer with Over One Year Experience  \
