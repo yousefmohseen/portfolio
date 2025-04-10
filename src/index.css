@@ -62,7 +62,8 @@
     }
     #about,
     #education,
-    #projects .head, 
+    #projects .head,
+    #best .head, 
     #projects .showproj,
     #contact{
         @apply      
@@ -132,7 +133,8 @@
 
 
 /* projects */
-    #projects .head{
+    #projects .head,
+    #best .head{
         @apply
             flex justify-between items-end pb-14
             max-tab-min:pb-10 max-mob:block max-mob:pb-7
@@ -186,4 +188,6 @@
     --color-praim1-opc:#00000088;
 }
 
-
+.none{
+    display: none !important;
+}

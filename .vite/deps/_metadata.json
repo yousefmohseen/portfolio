@@ -1,0 +1,46 @@
+{
+  "hash": "d846c404",
+  "configHash": "1eb50ed8",
+  "lockfileHash": "9a146b2a",
+  "browserHash": "152a24ab",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "21c00f4d",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "ab58a75d",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "a42c342f",
+      "needsInterop": false
+    },
+    "react-slick": {
+      "src": "../../node_modules/react-slick/lib/index.js",
+      "file": "react-slick.js",
+      "fileHash": "fbf0c502",
+      "needsInterop": true
+    },
+    "react-scroll": {
+      "src": "../../node_modules/react-scroll/modules/index.js",
+      "file": "react-scroll.js",
+      "fileHash": "bcf6d25f",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-HMVW6OXY": {
+      "file": "chunk-HMVW6OXY.js"
+    },
+    "chunk-UCZTVSZO": {
+      "file": "chunk-UCZTVSZO.js"
+    }
+  }
+}

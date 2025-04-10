@@ -10,21 +10,19 @@ import closeD from "../../assets/image/close-d.png"
 const NavBar = ({ navItem, add, themes }) => {
     const [acthomdet, setActhomdet] = useState(false)
     const [shownav, setShownav] = useState(true)
-
-    if (window.location.href.indexOf("details") >= 0) {
+    
+    useEffect(() => {
+        if (window.location.href.indexOf("details") >= 0) {
         add.setActdet(prev => prev = "active")
-        useEffect(() => {
             setActhomdet(true)
-        }, [])
 
     }
     else {
         add.setActdet(prev => prev = " ")
-        useEffect(() => {
             setActhomdet(false)
-        }, [])
 
     }
+}, [])
 
     const changethemes = (x) => {
         themes.setThemes(prev => prev = x)

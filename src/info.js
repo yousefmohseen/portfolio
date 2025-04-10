@@ -2,6 +2,9 @@ import photoI from "./assets/image/yousef-mohseen.png"
 import projschool from "./assets/image/school.jpg"
 import projskiing from "./assets/image/skiing.jpg"
 import projshoesstore from "./assets/image/shoes-store.jpg"
+import projdashboard from "./assets/image/dashboard.jpg"
+import projposts from "./assets/image/posts.png"
+
 
 export const info = {
     fname: "Yousef",
@@ -119,6 +122,30 @@ export const info = {
             repoUrl:"https://github.com/yousefmohseen/shoes-store",
             demoUrl: "https://yousefmohseen.github.io/shoes-store/",
             date:"20-6-2024",
+        },
+        {
+            id: 4,
+            srcImg: projposts,
+            add: "Dashboard for Posts",
+            desc: "A website specializing in adding, editing, and deleting your posts to databases through a simple and easy interactive control interface. Don't hesitate to request a quote from the website.",
+            basicLang: "Html-Css3-Vanilla javscript",
+            framework:"none",
+            libraries:"none",
+            repoUrl:"https://github.com/yousefmohseen/posts",
+            demoUrl: "https://yousefmohseen.github.io/posts/",
+            date:"13-7-2024",
+        },
+        {
+            id: 5,
+            srcImg: projdashboard,
+            add: "Dashboard for Products",
+            desc: "A website specializing in adding, modifying, and deleting products from databases through a simple and easy interactive control interface. If you're looking to manage your online store professionally, don't hesitate to request a quote from the website.",
+            basicLang: "Html-Css3-react.js",
+            framework:"react",
+            libraries:"tailwindcss",
+            repoUrl:"https://github.com/yousefmohseen/dashboard",
+            demoUrl: "https://yousefmohseen.github.io/dashboard/",
+            date:"2-9-2024",
         },
     ]
 }
