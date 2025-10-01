@@ -8,7 +8,7 @@
 /*global*/
     input,textarea{
         @apply 
-            pl-6 h-14 w-full 
+            px-6  h-14 w-full 
             outline-none border-praim9 border-[0.3px] rounded-[8px] mb-6
         ;
     }
@@ -87,7 +87,7 @@
             flex justify-center items-center gap-6 *:cursor-pointer
             max-tab-min:pt-9 max-tab-min:h-screen max-tab-min:w-[30%]
             max-tab-min:flex-col max-tab-min:justify-start 
-            max-tab-min:absolute max-tab-min:right-0 max-tab-min:top-[100%] 
+            max-tab-min:absolute  max-tab-min:top-[100%] 
             max-tab-min:hidden max-tab-min:bg-white max-tab-min:dark:bg-praim1 max-tab-min:dark:text-white 
     ;
     }

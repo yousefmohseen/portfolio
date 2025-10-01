@@ -1,16 +1,32 @@
 import { info } from "../../info"
 import aboutL from "../../assets/image/about-l.png"
 import aboutD from "../../assets/image/about-d.png"
+import { LangContext } from "../../pages/Root"
+import { basic } from "../../basic"
+import { useContext, useEffect, useState } from "react"
 
 const About = () => {
-    const prog = info.about.prog
+    const lang = useContext(LangContext)
+    const [infoo, setInfoo] = useState({})
+    const [basicc, setBisicc] = useState({})
+    useEffect(() => {
+        if (lang == "en") {
+            setInfoo(info.en.about)
+            setBisicc(basic.en.navBar)
+        }
+        else {
+            setInfoo(info.ar.about)
+            setBisicc(basic.ar.navBar)
+        }
+    }, [lang])
+
     return (
         <section className="flex-bet-center" id="about">
             <div className="w-[558px] max-tab:w-[490px] max-tab-min:w-full">
-                <h2>About Me</h2>
-                <p className="mt-3 mb-sp2 text-[18px]">{info.about.desc}</p>
-                <ul>
-                    {prog?.map((item, index) => {
+                <h2>{basicc.aboutme}</h2>
+                <p className="mt-3 mb-sp2 text-[18px]">{infoo.desc}</p>
+                <ul dir="ltr">
+                    {info.prog?.map((item, index) => {
                         return (
                             <li className="mb-4" key={index}>
                                 <div className="mb-1.5 text-[24px] font-semibold">{item.name}</div>
